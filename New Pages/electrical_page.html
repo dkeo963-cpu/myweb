@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Davin MEP Tools Store</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+/* GENERAL */
+body{
+background:#f4f4f4;
+font-family:Arial,sans-serif;
+margin:0;
+}
+
+/* LOGO ANIMATION */
+.logo-animate{
+animation:rotateLogo 5s linear infinite;
+max-width:120px;
+height:auto;
+}
+
+@keyframes rotateLogo{
+0%{transform:rotate(0)}
+50%{transform:rotate(20deg)}
+100%{transform:rotate(0)}
+}
+
+/* NAVBAR */
+.navbar-brand{
+font-weight:bold;
+}
+
+.navbar-nav .nav-link{
+margin-right:1rem;
+}
+
+/* HERO */
+.hero1{
+padding-top:0;
+padding-bottom:20px;
+}
+
+/* SERVICE BUTTON */
+.service-btn{
+display:inline-block;
+background:#3b2fa3;
+color:white;
+padding:12px 22px;
+text-decoration:none;
+font-weight:500;
+border-radius:20px 0 0 20px;
+}
+
+/* FLOATING MESSENGER */
+.floating-messenger{
+position:fixed;
+bottom:20px;
+right:20px;
+font-size:2rem;
+color:#0084FF;
+}
+
+/* SCROLLING TEXT */
+.scrolling-wrapper{
+overflow:hidden;
+}
+
+.scrolling-text{
+display:block;
+white-space:nowrap;
+font-size:clamp(12px,2vw,18px);
+animation:scroll-left 17s linear infinite;
+}
+
+@keyframes scroll-left{
+0%{transform:translateX(100%)}
+100%{transform:translateX(-100%)}
+}
+
+
+
+
+
+
+
+/* OFFCANVAS */
+.offcanvas-body img{
+width:50px;
+}
+/* OFFCANVAS */
+
+
+
+
+
+/* RESPONSIVE */
+/* tablet */
+@media(max-width:768px){
+.logo-animate{
+max-width:80px;
+}
+.navbar-brand span{
+font-size:14px;
+}
+.navbar-nav .nav-link{
+font-size:13px;
+margin-right:8px;
+}
+#searchForm{
+width:100%;
+margin-top:8px;
+}
+#searchInput{
+font-size:13px;
+height:32px;
+}
+}
+/* mobile */
+@media(max-width:576px){
+.logo-animate{
+max-width:65px;
+}
+.navbar-brand span{
+font-size:18px;
+}
+.navbar-nav{
+justify-content:center;
+width:100%;
+}
+.navbar-nav .nav-link{
+font-size:12px;
+padding:3px 6px;
+}
+.service-btn{
+font-size:12px;
+padding:8px 14px;
+}}
+/* RESPONSIVE */
+</style>
+
+
+
+
+
+
+
+<style>
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:#f5f5f5;
+}
+h2{
+text-align:center;
+margin-top:20px;
+}
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:20px;
+}
+/* PRODUCT CARD */
+
+.product{
+background:#fff;
+border-radius:10px;
+padding:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.3s;
+}
+
+.product:hover{
+transform:translateY(-5px);
+}
+
+/* IMAGE */
+
+.carousel{
+width:100%;
+height:180px;
+overflow:hidden;
+margin-bottom:10px;
+}
+
+.carousel img{
+width:100%;
+height:100%;
+object-fit:contain;
+display:none;
+}
+
+.carousel img.active{
+display:block;
+}
+
+/* SELECT */
+
+.size-select{
+width:100%;
+padding:8px;
+margin-top:5px;
+border-radius:5px;
+}
+
+/* STOCK */
+
+.stock{
+margin-top:8px;
+font-size:14px;
+}
+
+/* PRICE */
+
+.price{
+font-size:18px;
+font-weight:bold;
+margin-top:5px;
+color:#0a7c2f;
+}
+
+/* TITLE */
+
+.category-title{
+margin-top:10px;
+font-weight:bold;
+}
+
+/* LAPTOP */
+
+@media(max-width:1024px){
+
+.grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+/* TABLET */
+
+@media(max-width:768px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.carousel{
+height:150px;
+}
+
+}
+
+
+
+
+
+
+/* MOBILE (FORCE 2 COLUMNS) */
+@media(max-width:480px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+padding:10px;
+}
+
+.product{
+padding:10px;
+}
+
+.carousel{
+height:120px;
+}
+
+.price{
+font-size:14px;
+}
+
+}
+/* MOBILE (FORCE 2 COLUMNS) */
+
+
+
+
+
+
+
+/* BACK BUTTON */
+.back-btn{
+  background:white;
+  color:#0d6efd;
+  border:none;
+  padding:8px 16px;
+  border-radius:50px; /* makes it round */
+  font-size:15px;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* Hover for PC */
+.back-btn:hover{
+  background:#0d6efd;
+  color:white;
+}
+
+/* Tablet */
+@media (max-width:768px){
+  .back-btn{
+    padding:6px 12px;
+    font-size:13px;
+    border-radius:40px;
+  }
+}
+
+/* Mobile */
+@media (max-width:480px){
+  .back-btn{
+    padding:6px;
+    border-radius:50%;
+  }
+
+  .back-btn span{
+    display:none;
+  }
+
+  .back-btn i{
+    font-size:16px;
+  }
+}
+
+
+
+
+
+
+
+/* Font Khmer OS Battambong */
+.category-title1{
+  font-family: 'Battambang','Khmer OS Battambang',sans-serif;
+  font-size:25px;
+  font-weight:700;
+  text-align:center;
+  margin:30px auto;
+  color:#0b0b0b;
+  letter-spacing:0px;
+
+  /* button style */
+  background:#ffffff;
+  padding:5px 5px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+
+  margin:30px auto;
+width:fit-content;
+}
+/* Font Khmer OS Battambong */
+
+
+
+.category-title1{
+  font-size:23px;
+  font-weight:100;
+  text-align:center;
+  margin:30px auto;
+  color:#0b0b0b;
+
+  background:#ffffff;
+  padding:5px 5px;
+  border-radius:5px;
+  width:fit-content;
+
+
+/* Khmer font */
+.kh{
+  font-family:'Battambang','Khmer OS Battambang',sans-serif;
+}
+
+/* Bootstrap system UI font */
+.en {
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+
+/* inclicable លើរូបដំបូងគេលើផលិតផល */
+.carousel img {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.carousel img.active {
+  display: block;
+  opacity: 1;
+  position: relative;
+}
+
+.product-link.inactive {
+  pointer-events: none;
+  cursor: default;
+}
+
+.carousel {
+  position: relative;
+  height: 300px; /* adjust for your image height */
+}
+/* inclicable លើរូបដំបូងគេលើផលិតផល */
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark bg-primary">
+<div class="container d-flex flex-wrap align-items-center">
+
+
+<!-- BACK BUTTON -->
+<button onclick="history.back()" class="btn btn-light me-3">
+<i class="bi bi-arrow-left"></i>
+</button>
+
+
+<!-- LOGO -->
+<a class="navbar-brand d-flex align-items-center me-3">
+<img src="LOGO COMPANY/Approval Logo.png" class="logo-animate me-2">
+<span>Davin MEP Tools Store</span>
+</a>
+
+<ul class="navbar-nav d-flex flex-row flex-wrap ms-auto mb-0">
+<li class="nav-item me-3"><a class="nav-link text-light" href="#"></a></li>
+<li class="nav-item me-3"><a class="nav-link text-light" href="#"></a></li>
+<li class="nav-item me-3"><a class="nav-link text-light" href="#"></a></li>
+<li class="nav-item me-3"><a class="nav-link text-light" href="#"></a></li>
+</ul>
+
+<form class="d-flex ms-3 mt-2 mt-sm-0" id="searchForm">
+<input class="form-control me-2" type="search" placeholder="Search products..." id="searchInput">
+<button class="btn btn-light">Search</button>
+</form>
+
+</div>
+</nav>
+<!-- NAVBAR -->
+
+
+
+
+
+
+
+<!-- PROFILE BUTTON -->
+<div class="d-flex align-items-center p-1">
+<button class="btn btn-black me-2" data-bs-toggle="offcanvas" data-bs-target="#profileOffcanvas">
+<i class="bi bi-list fs-6"></i>
+</button>
+<span>Profile</span>
+</div>
+<!-- PROFILE BUTTON -->
+
+
+
+
+
+
+<!-- OFFCANVAS -->
+<div class="offcanvas offcanvas-start" id="profileOffcanvas">
+
+<div class="offcanvas-header">
+<h5 class="offcanvas-title">Company Profile</h5>
+<button class="btn-close" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body">
+<div class="text-center mb-3">
+<img src="Image/Banner/Logo1.png">
+<h6 class="mt-1">Davin MEP Tools</h6>
+</div>
+<p><strong>About Us:</strong> We provide professional tools for engineers & contractors.</p>
+<p><strong>Online Shop:</strong> <a href="#">Visit Shop</a></p>
+<p><strong>Contact:</strong> support@example.com</p>
+<p>"I know it’s tough, but I would fight for it and be happy about that."</p>
+<p>ខ្ញុំដឹងថាវាពិបាក តែខ្ញុំនឹងស៊ូ និងរីករាយនឹងរឿងពិបាក១ហ្នឹង។</p>
+<p>Quote by វីន</p>
+</div>
+</div>
+<!-- OFFCANVAS -->
+
+
+
+
+
+
+<!-- SLIDE BANNER -->
+<div class="container-fluid px-0">
+  <div style="
+    background-image:url('https://www.shutterstock.com/image-photo/electrician-tools-on-black-marble-600nw-2301247757.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    padding:20px;
+    overflow:hidden;
+    text-align:center;">
+    <div class="scrolling-wrapper">
+      <span class="scrolling-text" style="
+        display:inline-block;
+        background:rgba(73, 155, 199, 0.8); /* red background */
+        color:white;
+        padding:5px 15px;
+        border-radius:5px;
+        font-size:clamp(15px,2vw,18px);
+        margin:0 auto;">
+        សូមស្វាគមន៏ មកកាន់ Davin MEP Tools Store អស់បារម្ភចំពោះការទិញខុសសម្ភារៈ ទំនុកចិត្ត ងាយស្រួល និងគុណភាព
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE BANNER -->
+
+
+
+
+
+
+
+
+<div class="container">
+  <h2 class="category-title1">ឌីសង់ទ័រ | Circuit Breaker</h2>
+</div>
+
+<div class="grid">
+  <!-- PRODUCT 1: Circuit Breaker -->
+  <div class="product">
+    <div class="product">
+  <a href="#" class="product-link inactive">
+    <div class="carousel">
+      <img src="Image/Electrical/CB-3P-63A.jpg" class="size-small active" alt="DN50">
+      <img src="Image/Electrical/CB-4P-63A.webp" class="size-medium">
+      <img src="Image/Electrical/CB-4P-100A.webp" class="size-large">
+    </div>
+  </a>
+</div>
+
+    <select class="size-select">
+      <option value="">CB-10A</option>
+      <option value="small" data-stock="5" data-price="8.50" data-link="product-detail-1-dn50.html">63A-3P</option>
+      <option value="medium" data-stock="3" data-price="12.00" data-link="product-detail-1-dn65.html">63A-4P</option>
+      <option value="large" data-stock="2" data-price="18.75" data-link="product-detail-1-dn100.html">DN100</option>
+    </select>
+
+    <div class="stock">Select Pole</div>
+    <div class="price">$ --</div>
+    <div class="category-title">Circuit Breaker</div>
+  </div>
+
+  <!-- PRODUCT 2: Elbows -->
+  <div class="product">
+    <a href="product-detail-2-dn50.html" class="product-link">
+      <div class="carousel">
+        <img src="Image/MEP/Fitting/pvc-pipe-fitting-white-background-121871246.webp" class="size-small active">
+        <img src="product2_medium.jpg" class="size-medium">
+        <img src="product2_large.jpg" class="size-large">
+      </div>
+    </a>
+
+    <select class="size-select">
+      <option value="">-- Select DN --</option>
+      <option value="small" data-stock="10" data-price="5.50" data-link="product-detail-2-dn50.html">DN50</option>
+      <option value="medium" data-stock="7" data-price="7.50" data-link="product-detail-2-dn65.html">DN65</option>
+      <option value="large" data-stock="0" data-price="9.75" data-link="product-detail-2-dn100.html">DN100</option>
+    </select>
+
+    <div class="stock">Select a size</div>
+    <div class="price">$ --</div>
+    <div class="category-title">Elbows</div>
+  </div>
+
+  <!-- PRODUCT 3: Tees -->
+  <div class="product">
+    <a href="product-detail-3-dn50.html" class="product-link">
+      <div class="carousel">
+        <img src="Image/MEP/Fitting/pvc-pipe-connections-pipe-clip-group-white-background-clipping-path-73177199.webp" class="size-small active">
+        <img src="product3_medium.jpg" class="size-medium">
+        <img src="product3_large.jpg" class="size-large">
+      </div>
+    </a>
+
+    <select class="size-select">
+      <option value="">-- Select DN --</option>
+      <option value="small" data-stock="6" data-price="10.00" data-link="product-detail-3-dn50.html">DN50</option>
+      <option value="medium" data-stock="4" data-price="15.00" data-link="product-detail-3-dn65.html">DN65</option>
+      <option value="large" data-stock="2" data-price="20.00" data-link="product-detail-3-dn100.html">DN100</option>
+    </select>
+
+    <div class="stock">Select a size</div>
+    <div class="price">$ --</div>
+    <div class="category-title">Tees</div>
+  </div>
+
+  <!-- PRODUCT 4: Reducers -->
+  <div class="product">
+    <a href="product-detail-4-dn50.html" class="product-link">
+      <div class="carousel">
+        <img src="product4_small.jpg" class="size-small active">
+        <img src="product4_medium.jpg" class="size-medium">
+        <img src="product4_large.jpg" class="size-large">
+      </div>
+    </a>
+
+    <select class="size-select">
+      <option value="">-- Select DN --</option>
+      <option value="small" data-stock="8" data-price="6.50" data-link="product-detail-4-dn50.html">DN50</option>
+      <option value="medium" data-stock="5" data-price="9.00" data-link="product-detail-4-dn65.html">DN65</option>
+      <option value="large" data-stock="0" data-price="12.00" data-link="product-detail-4-dn100.html">DN100</option>
+    </select>
+
+    <div class="stock">Select a size</div>
+    <div class="price">$ --</div>
+    <div class="category-title">Reducers</div>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll(".size-select").forEach(select => {
+  select.addEventListener("change", function() {
+    const product = this.closest(".product");
+    const stock = product.querySelector(".stock");
+    const price = product.querySelector(".price");
+    const link = product.querySelector(".product-link");
+    const images = product.querySelectorAll(".carousel img");
+
+    // Hide all images
+    images.forEach(img => img.classList.remove("active"));
+
+    if (this.value !== "") {
+      const option = this.options[this.selectedIndex];
+
+      // Show selected image
+      product.querySelector(".size-" + this.value).classList.add("active");
+
+      // Update link and make clickable
+      link.href = option.dataset.link;
+      link.classList.remove("inactive");
+
+      // Update stock and price
+      stock.textContent = "Stock: " + option.dataset.stock;
+      price.textContent = "$ " + option.dataset.price;
+
+    } else {
+      stock.textContent = "Select a size";
+      price.textContent = "$ --";
+      link.href = "#";
+      link.classList.add("inactive");
+    }
+  });
+});
+
+
+// This is the part that prevents page jump when inactive
+document.querySelectorAll(".product-link").forEach(link => {
+  link.addEventListener("click", function(e){
+    if(link.classList.contains("inactive")){
+      e.preventDefault(); // prevent page jump if inactive
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FEATURED PRODUCTS -->
+<div class="container my-4">
+  <h5 class="mb-3">Featured Products</h5>
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <div class="card card-hover">
+        <img src="Image/MEP/Electrical/wire2.png" class="card-img-top" alt="Copper Wire 2.5mm">
+        <div class="card-body text-center">
+          <h6 class="card-title">Copper Wire 2.5mm</h6>
+          <p class="text-primary fw-bold">$12.50</p>
+          <button class="btn btn-sm btn-primary"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card card-hover">
+        <img src="Image/MEP/Electrical/wire2.png" class="card-img-top" alt="Insulated Wire 4mm">
+        <div class="card-body text-center">
+          <h6 class="card-title">Insulated Wire 4mm</h6>
+          <p class="text-primary fw-bold">$18.75</p>
+          <button class="btn btn-sm btn-primary"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card card-hover">
+        <img src="Image/MEP/Electrical/wire2.png" class="card-img-top" alt="PVC Conduit 20mm">
+        <div class="card-body text-center">
+          <h6 class="card-title">PVC Conduit 20mm</h6>
+          <p class="text-primary fw-bold">$6.99</p>
+          <button class="btn btn-sm btn-primary"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card card-hover">
+        <img src="Image/MEP/Electrical/wire2.png" class="card-img-top" alt="PVC Conduit 25mm">
+        <div class="card-body text-center">
+          <h6 class="card-title">PVC Conduit 25mm</h6>
+          <p class="text-primary fw-bold">$8.50</p>
+          <button class="btn btn-sm btn-primary"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FEATURED PRODUCTS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer style="background: black; color:white; padding:0px 0;">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+
+      <!-- LEFT : Contact Icons -->
+      <div class="col-md-4 mb-2 mb-md-0">
+        Contact Us:
+        
+        <a href="dkeo963@gmail.com" class="text-white ms-2 me-2">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+
+        <a href="https://t.me/dkeo963" target="_blank" class="text-white me-2">
+          <i class="bi bi-telegram"></i>
+        </a>
+
+        <a href="https://www.facebook.com/share/1DWi8rNMwe/" target="_blank" class="text-white me-2">
+          <i class="bi bi-facebook"></i>
+        </a>
+
+        <a href="https://wa.me/855XXXXXXXX" target="_blank" class="text-white me-2">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+
+        <a href="https://youtube.com/@dvkeducenter?si=pdxq09B27zu1AwP9" target="_blank" class="text-white me-2">
+          <i class="bi bi-youtube"></i>
+        </a>
+
+        <a href="https://tiktok.com" target="_blank" class="text-white">
+          <i class="bi bi-tiktok"></i>
+        </a>
+      </div>
+
+      <!-- CENTER : Text Only -->
+      <div class="col-md-4 mb-2 mb-md-0 text-center">
+        Powered by : Davin Keo & Co
+        <p>Easy to Buy | Time-Saving | Professional Tools.</p>
+      </div>
+
+      <!-- RIGHT : Back Home -->
+      <div class="col-md-4 text-md-end">
+        <a href="https://maps.app.goo.gl/77zxqr6rEDJrHtFz7" target="_blank" class="text-white text-decoration-none">
+          <i class="bi bi-geo"></i> Location
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

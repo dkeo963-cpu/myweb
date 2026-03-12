@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Davin MEP Tools Store</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+
+/* GENERAL */
+body{
+background:#f4f4f4;
+font-family:Arial,sans-serif;
+margin:0;
+}
+
+/* LOGO ANIMATION */
+.logo-animate{
+animation:rotateLogo 5s linear infinite;
+max-width:120px;
+height:auto;
+}
+
+@keyframes rotateLogo{
+0%{transform:rotate(0)}
+50%{transform:rotate(20deg)}
+100%{transform:rotate(0)}
+}
+
+/* NAVBAR */
+.navbar-brand{
+font-weight:bold;
+}
+
+.navbar-nav .nav-link{
+margin-right:1rem;
+}
+
+/* HERO */
+.hero1{
+padding-top:0;
+padding-bottom:20px;
+}
+
+/* SERVICE BUTTON */
+.service-btn{
+display:inline-block;
+background:#3b2fa3;
+color:white;
+padding:12px 22px;
+text-decoration:none;
+font-weight:500;
+border-radius:20px 0 0 20px;
+}
+
+/* FLOATING MESSENGER */
+.floating-messenger{
+position:fixed;
+bottom:20px;
+right:20px;
+font-size:2rem;
+color:#0084FF;
+}
+
+/* SCROLLING TEXT */
+.scrolling-wrapper{
+overflow:hidden;
+}
+
+.scrolling-text{
+display:block;
+white-space:nowrap;
+font-size:clamp(12px,2vw,18px);
+animation:scroll-left 17s linear infinite;
+}
+
+@keyframes scroll-left{
+0%{transform:translateX(100%)}
+100%{transform:translateX(-100%)}
+}
+
+/* OFFCANVAS */
+.offcanvas-body img{
+width:50px;
+}
+
+/* RESPONSIVE */
+
+/* tablet */
+@media(max-width:768px){
+
+.logo-animate{
+max-width:80px;
+}
+
+.navbar-brand span{
+font-size:14px;
+}
+
+.navbar-nav .nav-link{
+font-size:13px;
+margin-right:8px;
+}
+
+#searchForm{
+width:100%;
+margin-top:8px;
+}
+
+#searchInput{
+font-size:13px;
+height:32px;
+}
+
+}
+
+/* mobile */
+@media(max-width:576px){
+
+.logo-animate{
+max-width:65px;
+}
+
+.navbar-brand span{
+font-size:18px;
+}
+
+.navbar-nav{
+justify-content:center;
+width:100%;
+}
+
+.navbar-nav .nav-link{
+font-size:12px;
+padding:3px 6px;
+}
+
+.service-btn{
+font-size:12px;
+padding:8px 14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark bg-primary">
+<div class="container d-flex flex-wrap align-items-center">
+
+<a class="navbar-brand d-flex align-items-center me-3">
+<img src="Image/Logo_company/Approval Logo.png" class="logo-animate me-2">
+<span>Davin MEP Tools Store</span>
+</a>
+
+<ul class="navbar-nav d-flex flex-row flex-wrap ms-auto mb-0">
+<li class="nav-item me-3"><a class="nav-link text-light" href="#"></a></li>
+<li class="nav-item me-3"><a class="nav-link text-light" href="#"></a></li>
+<li class="nav-item me-3"><a class="nav-link text-light" href="#"></a></li>
+<li class="nav-item me-3"><a class="nav-link text-light" href="#"></a></li>
+</ul>
+<form class="d-flex ms-3 mt-2 mt-sm-0" id="searchForm">
+<input class="form-control me-2" type="search" placeholder="Search products..." id="searchInput">
+<button class="btn btn-light">Search</button>
+</form>
+</div>
+</nav>
+<!-- NAVBAR -->
+
+
+
+
+
+
+
+<!-- PROFILE BUTTON -->
+<div class="d-flex align-items-center p-1">
+<button class="btn btn-black me-2" data-bs-toggle="offcanvas" data-bs-target="#profileOffcanvas">
+<i class="bi bi-list fs-6"></i>
+</button>
+<span>Profile</span>
+</div>
+<!-- PROFILE BUTTON -->
+
+
+
+
+
+
+<!-- OFFCANVAS -->
+<div class="offcanvas offcanvas-start" id="profileOffcanvas">
+
+<div class="offcanvas-header">
+<h5 class="offcanvas-title">Company Profile</h5>
+<button class="btn-close" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body">
+<div class="text-center mb-3">
+<img src="Image/Banner/Logo1.png">
+<h6 class="mt-1">Davin MEP Tools</h6>
+</div>
+<p><strong>About Us:</strong> We provide professional tools for engineers & contractors.</p>
+<p><strong>Online Shop:</strong> <a href="#">Visit Shop</a></p>
+<p><strong>Contact:</strong> support@example.com</p>
+<p>"I know it’s tough, but I would fight for it and be happy about that."</p>
+<p>ខ្ញុំដឹងថាវាពិបាក តែខ្ញុំនឹងស៊ូ និងរីករាយនឹងរឿងពិបាក១ហ្នឹង។</p>
+<p>Quote by វីន</p>
+</div>
+</div>
+<!-- OFFCANVAS -->
+
+
+
+
+
+
+<!-- SLIDE BANNER -->
+<div class="container-fluid px-0">
+  <div style="
+    background-image:url('https://www.shutterstock.com/image-photo/electrician-tools-on-black-marble-600nw-2301247757.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    padding:20px;
+    overflow:hidden;
+    text-align:center;">
+    <div class="scrolling-wrapper">
+      <span class="scrolling-text" style="
+        display:inline-block;
+        background:rgba(73, 155, 199, 0.8); /* red background */
+        color:white;
+        padding:5px 15px;
+        border-radius:5px;
+        font-size:clamp(15px,2vw,18px);
+        margin:0 auto;">
+        សូមស្វាគមន៏ មកកាន់ Davin MEP Tools Store អស់បារម្ភ ចំពោះការទិញខុសសម្ភារៈ ដោយជួបអ្នកជំនាញផ្នែក
+      </span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- CATEGORIES SLIDER -->
+<div class="container my-4">
+  <h5 class="mb-3">Categories</h5>
+  <div class="row g-3">
+
+    <!-- Category 1 circuit breaker -->
+    <div class="col-6 col-md-3">
+      <a href="New Pages/electrical_page.html" class="text-decoration-none text-dark">
+        <div class="card card-hover p-2">
+          <div id="carouselCategory1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Image/Categories_picture/1. Circuit_Breaker_ឌីសង់ទ័រ/01.jpg" class="d-block w-100" alt="Electrical Wire 1">
+              </div>
+               <div class="carousel-item">
+                <img src="Image/Categories_picture/1. Circuit_Breaker_ឌីសង់ទ័រ/02.jpg" class="d-block w-100" alt="Electrical Wire 2">
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title"><div class="khmer font "style="font-family: 'Khmer OS Battambang', Arial, sans-serif; color: black; font-weight: 300;"><strong>ឌីសង់ទ័រ | Circuit Breaker
+            </strong></div></h6>
+            <p class="text-muted">23 items</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- Category 1 circuit breaker -->
+
+
+
+
+    <!-- Category 2 pvc fitting -->
+    <div class="col-6 col-md-3">
+      <a href="New Pages/index.html" class="text-decoration-none text-dark">
+        <div class="card card-hover p-2">
+          <div id="carouselCategory2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Image/Categories_picture/2. PVC_Fitting_តំណទុយោ/01.jpg" class="d-block w-100" alt="Power Tool 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Image/Categories_picture/2. PVC_Fitting_តំណទុយោ/02.jpg" class="d-block w-100" alt="Power Tool 2">
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title"><div class="khmer font "style="font-family: 'Khmer OS Battambang', Arial, sans-serif; color: black; font-weight: 300;"><strong>គ្រឿងទុយោ
+              | PVC Pipe Fittings
+            </strong></div></h6>
+            <p class="text-muted">150 items</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- Category 2 pvc fitting -->
+
+
+
+
+    <!-- Category 3 electrical wire -->
+    <div class="col-6 col-md-3">
+      <a href="safety-gear.html" class="text-decoration-none text-dark">
+        <div class="card card-hover p-2">
+          <div id="carouselCategory3" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Image/Categories_picture/3. Wire_ខ្សែភ្លើង/01.jpg" class="d-block w-100" alt="Safety Gear 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Image/Categories_picture/3. Wire_ខ្សែភ្លើង/02.jpg" class="d-block w-100" alt="Safety Gear 2">
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title"><div class="khmer font "style="font-family: 'Khmer OS Battambang', Arial, sans-serif; color: black; font-weight: 300;"><strong>ខ្សែភ្លើង
+              | Electrical Wire
+            </strong></div></h6>
+            <p class="text-muted">80 items</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- Category 3 electrical wire -->
+
+
+
+    <!-- Category 4 electrical accessories -->
+    <div class="col-6 col-md-3">
+      <a href="lighting.html" class="text-decoration-none text-dark">
+        <div class="card card-hover p-2">
+          <div id="carouselCategory4" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Image/Categories_picture/4. Electrical_Accessories_គ្រឿងអគ្គិសនី(ព្រី កុងតាក់)/01.png" class="d-block w-100" alt="Lighting 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Image/Categories_picture/4. Electrical_Accessories_គ្រឿងអគ្គិសនី(ព្រី កុងតាក់)/02.png" class="d-block w-100" alt="Lighting 2">
+              </div>
+               <div class="carousel-item">
+                <img src="Image/Categories_picture/4. Electrical_Accessories_គ្រឿងអគ្គិសនី(ព្រី កុងតាក់)/03.png" class="d-block w-100" alt="Lighting 2">
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title"><div class="khmer font "style="font-family: 'Khmer OS Battambang', Arial, sans-serif; color: black; font-weight: 300;"><strong>ខ្សែភ្លើងទោល
+              | Electrical Wire
+            </strong></div></h6>
+            <p class="text-muted">120 items</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- Category 4 electrical accessories -->
+
+
+
+
+    <!-- Category 5 -->
+    <div class="col-6 col-md-3">
+      <a href="switches.html" class="text-decoration-none text-dark">
+        <div class="card card-hover p-2">
+          <div id="carouselCategory5" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Image/MEP/Electrical/wire2.png" class="d-block w-100" alt="Switches 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Image/MEP/Electrical/wire2.png" class="d-block w-100" alt="Switches 2">
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title"><div class="khmer font "style="font-family: 'Khmer OS Battambang', Arial, sans-serif; color: black; font-weight: 300;"><strong>គ្រឿង និងសម្ភារៈអគ្គិសនី
+              | Electrical accessories
+            </strong></div></h6>
+            <p class="text-muted">90 items</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Category 6 -->
+    <div class="col-6 col-md-3">
+      <a href="sockets.html" class="text-decoration-none text-dark">
+        <div class="card card-hover p-2">
+          <div id="carouselCategory6" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Image/MEP/Electrical/wire2.png" class="d-block w-100" alt="Sockets 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Image/MEP/Electrical/wire2.png" class="d-block w-100" alt="Sockets 2">
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title"><div class="khmer font "style="font-family: 'Khmer OS Battambang', Arial, sans-serif; color: black; font-weight: 300;"><strong>ឧបករណ៍អគ្គិសនី
+              | Electrical Device and Tools
+            </strong></div></h6>
+            <p class="text-muted">70 items</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Category 7 -->
+    <div class="col-6 col-md-3">
+      <a href="cables.html" class="text-decoration-none text-dark">
+        <div class="card card-hover p-2">
+          <div id="carouselCategory7" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Image/MEP/Electrical/wire2.png" class="d-block w-100" alt="Cables 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Image/MEP/Electrical/wire2.png" class="d-block w-100" alt="Cables 2">
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Cables</h6>
+            <p class="text-muted">110 items</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Category 8 -->
+    <div class="col-6 col-md-3">
+      <a href="conduits.html" class="text-decoration-none text-dark">
+        <div class="card card-hover p-2">
+          <div id="carouselCategory8" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Image/MEP/Electrical/wire2.png" class="d-block w-100" alt="Conduits 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Image/MEP/Electrical/wire2.png" class="d-block w-100" alt="Conduits 2">
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Conduits</h6>
+            <p class="text-muted">60 items</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- CATEGORIES SLIDER -->
+
+
+
+
+
+
+
+<!-- FEATURED PRODUCTS -->
+<div class="container my-4">
+  <h5 class="mb-3">Featured Products</h5>
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <div class="card card-hover">
+        <img src="Image/MEP/Electrical/wire2.png" class="card-img-top" alt="Copper Wire 2.5mm">
+        <div class="card-body text-center">
+          <h6 class="card-title">Copper Wire 2.5mm</h6>
+          <p class="text-primary fw-bold">$12.50</p>
+          <button class="btn btn-sm btn-primary"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card card-hover">
+        <img src="Image/MEP/Electrical/wire2.png" class="card-img-top" alt="Insulated Wire 4mm">
+        <div class="card-body text-center">
+          <h6 class="card-title">Insulated Wire 4mm</h6>
+          <p class="text-primary fw-bold">$18.75</p>
+          <button class="btn btn-sm btn-primary"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card card-hover">
+        <img src="Image/MEP/Electrical/wire2.png" class="card-img-top" alt="PVC Conduit 20mm">
+        <div class="card-body text-center">
+          <h6 class="card-title">PVC Conduit 20mm</h6>
+          <p class="text-primary fw-bold">$6.99</p>
+          <button class="btn btn-sm btn-primary"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card card-hover">
+        <img src="Image/MEP/Electrical/wire2.png" class="card-img-top" alt="PVC Conduit 25mm">
+        <div class="card-body text-center">
+          <h6 class="card-title">PVC Conduit 25mm</h6>
+          <p class="text-primary fw-bold">$8.50</p>
+          <button class="btn btn-sm btn-primary"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FEATURED PRODUCTS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer style="background: black; color:white; padding:0px 0;">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+
+      <!-- LEFT : Contact Icons -->
+      <div class="col-md-4 mb-2 mb-md-0">
+        Contact Us:
+        
+        <a href="dkeo963@gmail.com" class="text-white ms-2 me-2">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+
+        <a href="https://t.me/dkeo963" target="_blank" class="text-white me-2">
+          <i class="bi bi-telegram"></i>
+        </a>
+
+        <a href="https://www.facebook.com/share/1DWi8rNMwe/" target="_blank" class="text-white me-2">
+          <i class="bi bi-facebook"></i>
+        </a>
+
+        <a href="https://wa.me/855XXXXXXXX" target="_blank" class="text-white me-2">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+
+        <a href="https://youtube.com/@dvkeducenter?si=pdxq09B27zu1AwP9" target="_blank" class="text-white me-2">
+          <i class="bi bi-youtube"></i>
+        </a>
+
+        <a href="https://tiktok.com" target="_blank" class="text-white">
+          <i class="bi bi-tiktok"></i>
+        </a>
+      </div>
+
+      <!-- CENTER : Text Only -->
+      <div class="col-md-4 mb-2 mb-md-0 text-center">
+        Powered by : Davin Keo & Co
+        <p>Easy to Buy | Time-Saving | Professional Tools.</p>
+      </div>
+
+      <!-- RIGHT : Back Home -->
+      <div class="col-md-4 text-md-end">
+        <a href="https://maps.app.goo.gl/77zxqr6rEDJrHtFz7" target="_blank" class="text-white text-decoration-none">
+          <i class="bi bi-geo"></i> Location
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
